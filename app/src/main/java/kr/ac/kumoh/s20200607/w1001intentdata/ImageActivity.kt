@@ -2,6 +2,7 @@ package kr.ac.kumoh.s20200607.w1001intentdata
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import kr.ac.kumoh.s20200607.w1001intentdata.databinding.ActivityImageBinding
 
 class ImageActivity : AppCompatActivity() {
@@ -11,6 +12,8 @@ class ImageActivity : AppCompatActivity() {
 //        setContentView(R.layout.activity_image)
         binding = ActivityImageBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        //Toast.makeText(this, intent.getStringExtra("image"), Toast.LENGTH_LONG).show()
 
         val res = when (intent.getStringExtra("image")) {
             "gundam" -> R.drawable.gundam
